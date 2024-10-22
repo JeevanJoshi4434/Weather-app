@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    build:
+      context: .  # Use the current directory as the build context
+      dockerfile: Dockerfile  # Specify the Dockerfile to use
+    container_name: WeatherApp_Jeevan_Joshi
+    ports:
+      - "3259:3259"  # Map port 3259 on the host to port 3259 in the container
+    environment:
+      - NODE_ENV=production
+      - PORT=3259  # Specify the port as an environment variable
